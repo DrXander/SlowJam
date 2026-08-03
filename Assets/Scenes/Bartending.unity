@@ -1778,6 +1778,9 @@ MonoBehaviour:
   - drinknames: milk shake
     ingredients: 0000000000000000
     effect: 0
+  - drinknames: 'alchol '
+    ingredients: 0000000000000000
+    effect: 0
   Stealing: 0
   ServingCorrect: 0
   ServingWrong: 0
