@@ -61,8 +61,8 @@ public class MixingStation : MonoBehaviour
 
     public void Mixing()
     {
-        if (selected.Count == Order.ingredients.Count) return;
-        
+        if (selected.Count == 0|| Order == null) return;
+
             bool isMatch = selected.Count == Order.ingredients.Count;
         if (isMatch)
         {
@@ -75,6 +75,16 @@ public class MixingStation : MonoBehaviour
                 }
             }
 
+            
+        }
+
+        if (isMatch)
+        {
+            ServeDrink();
+            money += Order.PriceOfItem;
+            tips += Random.Range(1, 5);
+            selected.Clear();
+            Debug.Log("Correct Served: " + Order.drinknames);
         }
         else
         {
@@ -82,7 +92,7 @@ public class MixingStation : MonoBehaviour
             reputation--;
             selected.Clear();
             Debug.Log("Wrong Served: " + Order.drinknames);
-        } 
+        }
         CustomerArrive();
 
     }
@@ -91,11 +101,5 @@ public class MixingStation : MonoBehaviour
     {
         ServingCorrect++;
         reputation++;
-    }
-
-    public void StealDrink()
-    {
-        Stealing++;
-        reputation--;
     }
 }
