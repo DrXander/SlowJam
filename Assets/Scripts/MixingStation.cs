@@ -1,6 +1,4 @@
-using NUnit.Framework;
 using System.Collections.Generic;
-using Unity.Multiplayer.Center.Common;
 using UnityEngine;
 
 public enum IngredientType
@@ -16,26 +14,45 @@ public class recepie
         public string drinknames;
         public List<IngredientType> ingredients = new List<IngredientType>();
         public powerEffect effect;
+        public int PriceOfItem;
 }
 
 public class MixingStation : MonoBehaviour
 {
     public recepie[] recepies;
-    public int Stealing;
-    public int ServingCorrect;
-    public int ServingWrong;
-    public int reputation;
+    public recepie Order;
+
+    public int Stealing = 0;
+    public int ServingCorrect = 0;
+    public int ServingWrong = 0;
+    public int reputation = 50;
+    public int money = 0;
+    public int tips = 0;
+
     List<IngredientType> selected = new List<IngredientType>();
 
     public void Start()
     {
+
         CustomerArrive();
+        
+    }
+
+    public void Update()
+    {
+        if (reputation <= 0)
+        {
+            Debug.Log("Game Over");
+        }
     }
 
     public void CustomerArrive()
     {
-        
+        int randomIndex = Random.Range(0, recepies.Length);
+        Order = recepies[randomIndex];
+        Debug.Log("Customer Order: " + Order.drinknames);
     }
+
     public void Ingredientclicked(IngredientType picked)
     {
         selected.Add(picked);
@@ -44,30 +61,41 @@ public class MixingStation : MonoBehaviour
 
     public void Mixing()
     {
-        foreach (var recipe in recepies)
+        if (selected.Count == Order.ingredients.Count) return;
+        
+            bool isMatch = selected.Count == Order.ingredients.Count;
+        if (isMatch)
         {
-            if (selected.Count == recipe.ingredients.Count)
+            for (int i = 0; i < selected.Count; i++)
             {
-                bool isMatch = true;
-                for (int i = 0; i < selected.Count; i++)
+                if (selected[i] != Order.ingredients[i])
                 {
-                    if (selected[i] != recipe.ingredients[i])
-                    {
-                        isMatch = false;
-                        break;
-                    }
-                }
-                if (isMatch)
-                {
-                    ServingCorrect++;
-                    reputation++;
-                    selected.Clear();
-                    return;
+                    isMatch = false;
+                    break;
                 }
             }
+
         }
-        ServingWrong++;
+        else
+        {
+            ServingWrong++;
+            reputation--;
+            selected.Clear();
+            Debug.Log("Wrong Served: " + Order.drinknames);
+        } 
+        CustomerArrive();
+
+    }
+
+    public void ServeDrink()
+    {
+        ServingCorrect++;
+        reputation++;
+    }
+
+    public void StealDrink()
+    {
+        Stealing++;
         reputation--;
-        selected.Clear();
     }
 }
