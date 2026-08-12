@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class FMODCode : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    [SerializeField] private FMODUnity.EventReference eventReference;
+    
+    public void PlaySound()
     {
-        
+        FMODUnity.RuntimeManager.PlayOneShot(eventReference, transform.position);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        PlaySound();
     }
 }
