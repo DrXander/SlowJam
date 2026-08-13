@@ -1,0 +1,29 @@
+{bfe225dd-59d7-49c1-a958-44721b7cb881} bank:/Master
+{27ff0509-28ac-0583-2f11-ce8cea8fbe19} bank:/Master.strings
+{9ec69d84-1df1-44f8-9559-18a5633bf027} bus:/
+{24126e5a-a7cb-41d7-b71c-f9d8bc5195c6} bus:/Ambience
+{db1788ed-16ea-410f-b3a0-8d2853f5532f} bus:/Character
+{d47bf0c3-890a-43c5-b4ed-6bb3ff05cc3a} bus:/Item
+{4b4043ec-0d74-48ab-aeb6-3d095017d823} bus:/Music
+{157e3fd7-05bf-4c86-ac2c-f531c26149c6} bus:/Object
+{eb254389-e231-4f5b-bf64-64be05f7a459} bus:/Reverb
+{5fe6c4db-0b7d-4434-b715-27039c22dd62} bus:/UI
+{a5d845cc-2a0d-48e9-a3df-015509511b7b} event:/amb/amb_bar_lp
+{dd9059d6-c8e1-42f3-a292-96774bc97c77} event:/mus/mus_day_1_mus
+{ead0dc38-3b30-478b-a464-f67beaf810ad} event:/mus/mus_day_2_mus
+{af7ed5e7-4a58-487a-b65a-0ac57b97b7eb} event:/obj/obj_bottle_click_os
+{449d5853-fe64-4475-bdfb-b9f4ea8a22ce} event:/obj/obj_bottle_glug_os
+{89904345-9581-4325-9b64-a8b85b101eb2} event:/obj/obj_bottle_misc_1_os
+{3d1cba8c-fd29-43b9-81d4-fbeff5bfb456} event:/obj/obj_bottle_misc_2_os
+{5c67345b-20d5-4bfe-a28a-30caa65e4d29} event:/obj/obj_bottle_open_os
+{c8fbd898-1f22-4b84-ad2a-f029e09a7419} event:/obj/obj_bottle_pour_os
+{c1f7a224-103a-4a69-8d0c-7af3f5e830c3} event:/sample loop (complex)
+{b62b5b09-d24c-47eb-8346-cafebed9a255} event:/sample loop (simple)
+{9af10050-348a-4510-b406-b0ced4b86ba1} event:/sample music
+{957a6a31-2be9-4c10-b783-f2ab4cd0ea2d} event:/sample oneshot
+{fe785962-351e-494f-b071-ed834175db98} event:/ui/ui_click_os
+{2cec26a5-a331-4da4-b8c5-a0d42c117bb9} event:/ui/ui_hover_os
+{b2c0d4fe-65eb-4e00-bcb6-8e05759e5178} event:/ui/ui_misc_1_os
+{91c01239-d41c-472c-b640-0db8d9d22d89} event:/ui/ui_misc_2_os
+{f6a18869-08ec-4377-a911-c73046cfa7b6} event:/ui/ui_money_count_os
+{b461e907-e3f8-4109-901c-7a626fc9e043} parameter:/Intensity
