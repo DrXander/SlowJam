@@ -27,6 +27,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8834513827571526975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus_day_2_mus/Intensity
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2785069408
+    data2: 3434487380
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8603074350844208272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,10 +350,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639220746802642023
+  lastModified: 639221610944904467
   FileSizes:
   - Name: Desktop
-    Value: 1800
+    Value: 1848
   Exists: 1
 --- !u!114 &-2532810084843662452
 MonoBehaviour:
@@ -445,13 +469,14 @@ MonoBehaviour:
   - {fileID: 21461031394523866}
   - {fileID: -3647606737903278263}
   - {fileID: -5361674802756285691}
+  - {fileID: 8004650272793341622}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2199961473663073932}
   StringsBanks:
   - {fileID: -2959048370359251756}
   cacheVersion: 131859
-  cacheTime: 639220746802642023
+  cacheTime: 639221610944904467
   SerializableEventsDict:
   - key: event:/sample loop (simple)
     index: 0
@@ -487,6 +512,8 @@ MonoBehaviour:
     index: 15
   - key: event:/ui/ui_misc_1_os
     index: 16
+  - key: event:/mus/mus_day_2_mus
+    index: 17
 --- !u!114 &21461031394523866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,10 +689,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639220746802626940
+  lastModified: 639221610944839166
   FileSizes:
   - Name: Desktop
-    Value: 6161024
+    Value: 8364384
   Exists: 1
 --- !u!114 &3138160783245559912
 MonoBehaviour:
@@ -1092,6 +1119,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8004650272793341622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus/mus_day_2_mus
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/mus/mus_day_2_mus
+  Guid:
+    Data1: -355410888
+    Data2: 1200306992
+    Data3: 2079745188
+    Data4: -1391396630
+  Banks:
+  - {fileID: 2199961473663073932}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8834513827571526975}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 193307
 --- !u!114 &8522543742664276091
 MonoBehaviour:
   m_ObjectHideFlags: 0
