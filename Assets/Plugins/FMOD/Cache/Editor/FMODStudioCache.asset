@@ -350,10 +350,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639221610944904467
+  lastModified: 639222448852549375
   FileSizes:
   - Name: Desktop
-    Value: 1848
+    Value: 1952
   Exists: 1
 --- !u!114 &-2532810084843662452
 MonoBehaviour:
@@ -470,13 +470,15 @@ MonoBehaviour:
   - {fileID: -3647606737903278263}
   - {fileID: -5361674802756285691}
   - {fileID: 8004650272793341622}
+  - {fileID: 6915575896806371191}
+  - {fileID: 1742920087028527411}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2199961473663073932}
   StringsBanks:
   - {fileID: -2959048370359251756}
   cacheVersion: 131859
-  cacheTime: 639221610944904467
+  cacheTime: 639222448852549375
   SerializableEventsDict:
   - key: event:/sample loop (simple)
     index: 0
@@ -514,6 +516,10 @@ MonoBehaviour:
     index: 16
   - key: event:/mus/mus_day_2_mus
     index: 17
+  - key: event:/mus/mus_title_theme_mus
+    index: 18
+  - key: event:/mus/mus_final_wish_mus
+    index: 19
 --- !u!114 &21461031394523866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,6 +548,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 251331
+--- !u!114 &82228625216237656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus_final_wish_mus/Intensity
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2785069408
+    data2: 3434487380
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &279681059420685551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,6 +677,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1742920087028527411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus/mus_final_wish_mus
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/mus/mus_final_wish_mus
+  Guid:
+    Data1: -556090191
+    Data2: 1121414442
+    Data3: -1420653922
+    Data4: -1709822742
+  Banks:
+  - {fileID: 2199961473663073932}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 82228625216237656}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 124370
 --- !u!114 &1753838508463526898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,10 +747,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639221610944839166
+  lastModified: 639222448852349196
   FileSizes:
   - Name: Desktop
-    Value: 8364384
+    Value: 10403072
   Exists: 1
 --- !u!114 &3138160783245559912
 MonoBehaviour:
@@ -1037,6 +1095,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6915575896806371191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus/mus_title_theme_mus
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/mus/mus_title_theme_mus
+  Guid:
+    Data1: 1696430863
+    Data2: 1172297329
+    Data3: 1951008640
+    Data4: 902243807
+  Banks:
+  - {fileID: 2199961473663073932}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7613471914235324848}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 89563
 --- !u!114 &7094127212200487938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,6 +1178,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7613471914235324848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus_title_theme_mus/Intensity
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2785069408
+    data2: 3434487380
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7867229764086886549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,7 +1256,7 @@ MonoBehaviour:
   - {fileID: -8834513827571526975}
   MinDistance: 1
   MaxDistance: 20
-  Length: 193307
+  Length: 193184
 --- !u!114 &8522543742664276091
 MonoBehaviour:
   m_ObjectHideFlags: 0
