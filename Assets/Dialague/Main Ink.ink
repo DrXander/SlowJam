@@ -1,7 +1,10 @@
-INCLUDE Character1.ink
-INCLUDE Character2.ink
-INCLUDE Character3.ink
-INCLUDE Character4.ink
+INCLUDE Gao.ink
+INCLUDE Okada.ink
+INCLUDE Anima.ink
+INCLUDE Nato.ink
 
 VAR Reputation = 0
 VAR barday = 0
+
+==End==
+-> End
