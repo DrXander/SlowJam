@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-
     public static AudioManager Instance { get; private set; }
 
     private EventInstance MusicEvent;
+    private EventInstance AmbBarEvent;
 
     private void Awake()
     {
@@ -22,9 +22,10 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void Start()
     {
-        InitializeMusic(FmodManager.Instance.Day1Music);
+        AmbBarEvent = RuntimeManager.CreateInstance(FmodManager.Instance.AmbBar);
+        AmbBarEvent.start();
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
@@ -32,9 +33,30 @@ public class AudioManager : MonoBehaviour
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
 
-    private void InitializeMusic(EventReference musicEvent)
+    public void SwitchMusic(EventReference newMusic)
     {
-        MusicEvent = RuntimeManager.CreateInstance(musicEvent);
+        StopMusic();
+        MusicEvent = RuntimeManager.CreateInstance(newMusic);
         MusicEvent.start();
     }
+
+    public void StopMusic()
+    {
+        if (MusicEvent.isValid())
+        {
+            MusicEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            MusicEvent.release();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        StopMusic();
+        if (AmbBarEvent.isValid())
+        {
+            AmbBarEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            AmbBarEvent.release();
+        }
+    }
+
 }
