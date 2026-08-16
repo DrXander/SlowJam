@@ -225,116 +225,116 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FmodManager
   <AmbBar>k__BackingField:
     Guid:
-      Data1: -1238672631
-      Data2: 1206637132
-      Data3: -20298109
-      Data4: 1436735934
-    Path: event:/sample loop (simple)
+      Data1: -1512553012
+      Data2: 1223240205
+      Data3: 1426186147
+      Data4: 2065387785
+    Path: event:/amb/amb_bar_lp
   <Day1Music>k__BackingField:
     Guid:
-      Data1: -1695481776
-      Data2: 1158689930
-      Data3: -827324748
-      Data4: -1586775852
-    Path: event:/sample music
+      Data1: -577742378
+      Data2: 1123272929
+      Data3: 2006356642
+      Data4: 2004666699
+    Path: event:/mus/mus_day_1_mus
   <Day2Music>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -355410888
+      Data2: 1200306992
+      Data3: 2079745188
+      Data4: -1391396630
+    Path: event:/mus/mus_day_2_mus
   <Day3Music>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -577742378
+      Data2: 1123272929
+      Data3: 2006356642
+      Data4: 2004666699
+    Path: event:/mus/mus_day_1_mus
   <Day4Music>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -355410888
+      Data2: 1200306992
+      Data3: 2079745188
+      Data4: -1391396630
+    Path: event:/mus/mus_day_2_mus
   <BottleClick>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1350642201
+      Data2: 1215973976
+      Data3: -989177162
+      Data4: -340289669
+    Path: event:/obj/obj_bottle_click_os
   <BottleGlug>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1151162451
+      Data2: 1148583524
+      Data3: -189137987
+      Data4: -836597014
+    Path: event:/obj/obj_bottle_glug_os
   <BottleMisc1>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1987034299
+      Data2: 1126536577
+      Data3: -1196923749
+      Data4: -1306652581
+    Path: event:/obj/obj_bottle_misc_1_os
   <BottleMisc2>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1025292940
+      Data2: 1136262441
+      Data3: -268708735
+      Data4: 1454686197
+    Path: event:/obj/obj_bottle_misc_2_os
   <BottleOpen>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1550267483
+      Data2: 1274945749
+      Data3: -902788446
+      Data4: 692936358
+    Path: event:/obj/obj_bottle_open_os
   <BottlePour>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -923019112
+      Data2: 1266949922
+      Data3: 703605421
+      Data4: 427072224
+    Path: event:/obj/obj_bottle_pour_os
   <UIClick>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -25667230
+      Data2: 1229927710
+      Data3: -2081590864
+      Data4: -1730448063
+    Path: event:/ui/ui_click_os
   <UIHover>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 753673893
+      Data2: 1302635313
+      Data3: -727661128
+      Data4: -1183117012
+    Path: event:/ui/ui_hover_os
   <UIMisc>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1295985410
+      Data2: 1308648939
+      Data3: 93238972
+      Data4: 2018614901
+    Path: event:/ui/ui_misc_1_os
   <UIMisc2>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1849683399
+      Data2: 1194120220
+      Data3: -1207091018
+      Data4: -1993485607
+    Path: event:/ui/ui_misc_2_os
   <UIMoneyCount>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -157185943
+      Data2: 1131874540
+      Data3: 818352553
+      Data4: -1230516410
+    Path: event:/ui/ui_money_count_os
 --- !u!4 &183068629
 Transform:
   m_ObjectHideFlags: 0
