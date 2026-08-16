@@ -10,6 +10,16 @@ arrator: This is so cool dont you think?
         Narrator: oh thats not okay
     -> Nevermind
         Narrator: Aye all good then 
+        
+===
 
+title: help
+position: 149,177
+---
+Narrator: Hello this is a test
+-> its working
+    Narrator: Yay
+-> its not working
+    Narrator: Lets see what we can do about that
 
 ===

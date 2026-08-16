@@ -117,6 +117,36 @@ public class GameManager : MonoBehaviour
             portraitAnimator.SetBool("isTalking", false);
             portraitAnimator.SetTrigger("Exit");
         }
+
+        charactertalked++;
+
+        if (charactertalked < CharacterTime[days].Length)
+        {
+            StartCoroutine(NextCustomerAfterDelay());   // was: CurrentCustomer();
+        }
+        else
+        {
+            days++;
+            charactertalked = 0;
+
+            if (days < CharacterTime.Length)
+            {
+                AudioManager.Instance.SwitchMusic(FmodManager.Instance.GetDayMusic(days));
+                StartCoroutine(NextCustomerAfterDelay()); // was: CurrentCustomer();
+            }
+            else
+            {
+                Debug.Log("All days complete.");
+            }
+        }
+    }
+
+    private IEnumerator NextCustomerAfterDelay()
+    {
+        // let the Dialogue Runner fully finish closing the previous conversation
+        yield return null;                 // wait one frame
+                                           // if one frame isn't enough, use: yield return new WaitForSeconds(0.1f);
+        CurrentCustomer();
     }
 
     private void CurrentCustomer()
@@ -147,6 +177,7 @@ public class GameManager : MonoBehaviour
       
         string node = character.Nodes[visit];
         visitCount[index]++;
+        Debug.Log($"Starting node: {node} for {character.characterName}");
         dialogueRunner.StartDialogue(node);
     }
 
