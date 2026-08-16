@@ -143,9 +143,9 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator NextCustomerAfterDelay()
     {
-        // let the Dialogue Runner fully finish closing the previous conversation
-        yield return null;                 // wait one frame
-                                           // if one frame isn't enough, use: yield return new WaitForSeconds(0.1f);
+        yield return null;
+            new WaitForSeconds(0.2f);                 
+                                           
         CurrentCustomer();
     }
 
@@ -172,9 +172,13 @@ public class GameManager : MonoBehaviour
         if (portrait != null && character.portiart != null)
             portrait.sprite = character.portiart;
 
-        if (portraitAnimator != null) portraitAnimator.SetTrigger("Enter");
+        if (portraitAnimator != null)
+        {
+            portraitAnimator.SetInteger("character", index);
+            portraitAnimator.SetTrigger("Enter");              
+        }
 
-      
+
         string node = character.Nodes[visit];
         visitCount[index]++;
         Debug.Log($"Starting node: {node} for {character.characterName}");
