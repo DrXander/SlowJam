@@ -65,5 +65,15 @@ public class FmodManager : MonoBehaviour
         }
     }
 
+    public FMODUnity.EventReference GetDayMusic(int dayIndex)
+    {
+        switch (dayIndex)
+        {
+            case 0: return Day1Music;
+                case 1: return Day2Music;
+                case 2: return Day3Music;
+                default: return Day4Music;
+        }
+    }
 
 }

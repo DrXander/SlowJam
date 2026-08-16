@@ -1,0 +1,15 @@
+﻿title: start
+position: 301,-6
+---
+arrator: This is so cool dont you think?
+-> Yead
+    Narrator: Awesome to hear
+-> No
+    Narrator: Oh no what seems to be the issue
+    -> Cant get things right
+        Narrator: oh thats not okay
+    -> Nevermind
+        Narrator: Aye all good then 
+
+
+===
