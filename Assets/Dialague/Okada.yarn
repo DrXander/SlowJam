@@ -7,3 +7,10 @@ Okada: This is an example of a Yarn Spinner script. Write your dialogue here!
  -> Its not working
     Okada: you gotta be kidding me
 ===
+title: NodeName
+---
+Okawa: Yes finally working
+    ->together is power
+
+    -> Power is friendship
+===

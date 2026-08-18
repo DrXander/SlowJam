@@ -1,8 +1,9 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Yarn.Unity;
-using static GameManager;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class GameManager : MonoBehaviour
 
     [Header("Paused menu")]
     [SerializeField] private GameObject PauseMenuUI;
+
+    [Header("Advanced Day")]
+    [SerializeField] private Animator DayAnimation;
+    [SerializeField] private TMP_Text DayText;
+    [SerializeField] private float NextCustomerTime = 10;
 
     public static GameManager Instance { get; private set; }
     public GameState GameStates {  get; private set; }
@@ -50,12 +56,10 @@ public class GameManager : MonoBehaviour
 
     public readonly int[][] CharacterTime =
     {
-        new[] {0,1},
-        new[] {2,3},
-        new[] {1,2},
-        new[] {0,3},
-        new[] {1,0},
-        new[] {2},
+        new[] {0,1}, 
+        new[] {2,3}, 
+        new[] {1,2}, 
+        new[] {0,3}, 
     };
 
     private int days = 0;
@@ -67,12 +71,11 @@ public class GameManager : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
+            return;
         }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
+
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
 
         visitCount = new int[characterData.Length];
     }
@@ -118,35 +121,7 @@ public class GameManager : MonoBehaviour
             portraitAnimator.SetTrigger("Exit");
         }
 
-        charactertalked++;
-
-        if (charactertalked < CharacterTime[days].Length)
-        {
-            StartCoroutine(NextCustomerAfterDelay());   // was: CurrentCustomer();
-        }
-        else
-        {
-            days++;
-            charactertalked = 0;
-
-            if (days < CharacterTime.Length)
-            {
-                AudioManager.Instance.SwitchMusic(FmodManager.Instance.GetDayMusic(days));
-                StartCoroutine(NextCustomerAfterDelay()); // was: CurrentCustomer();
-            }
-            else
-            {
-                Debug.Log("All days complete.");
-            }
-        }
-    }
-
-    private IEnumerator NextCustomerAfterDelay()
-    {
-        yield return null;
-            new WaitForSeconds(0.2f);                 
-                                           
-        CurrentCustomer();
+        StartCoroutine(AdvanceAfterExit());
     }
 
     private void CurrentCustomer()
@@ -182,7 +157,57 @@ public class GameManager : MonoBehaviour
         string node = character.Nodes[visit];
         visitCount[index]++;
         Debug.Log($"Starting node: {node} for {character.characterName}");
-        dialogueRunner.StartDialogue(node);
+        _ = dialogueRunner.StartDialogue(node);
+    }
+
+    private void AdvanceDay()
+    {
+        days++;
+        charactertalked = 0;
+        if (days < CharacterTime.Length)
+        {
+            if (DayText != null) DayText.text = $"Day {days + 1}";
+
+            if (DayAnimation != null)
+            {
+                DayAnimation.SetTrigger("DayChange");
+            }
+            else
+            {
+                DayCardFinnished();
+            }
+        }
+        else
+        {
+                DayCard();
+                DayCardFinnished();
+        }
+    }
+
+    public void DayCard()
+    {
+        AudioManager.Instance.SwitchMusic(FmodManager.Instance.GetDayMusic(days));
+    }
+
+    public void DayCardFinnished()
+    {
+        CurrentCustomer();
+    }
+
+    private IEnumerator AdvanceAfterExit()
+    {
+
+        if (portraitAnimator != null)
+            yield return new WaitForSeconds(NextCustomerTime);   
+        else
+            yield return null;
+
+        charactertalked++;
+
+        if (charactertalked < CharacterTime[days].Length)
+            CurrentCustomer();         
+        else
+            AdvanceDay();              
     }
 
 
