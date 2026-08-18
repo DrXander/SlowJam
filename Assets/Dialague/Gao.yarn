@@ -1,25 +1,5 @@
-﻿title: start
-position: 301,-6
+﻿title: GaoStart
+position: 202,-32
 ---
-arrator: This is so cool dont you think?
--> Yead
-    Narrator: Awesome to hear
--> No
-    Narrator: Oh no what seems to be the issue
-    -> Cant get things right
-        Narrator: oh thats not okay
-    -> Nevermind
-        Narrator: Aye all good then 
-        
-===
-
-title: help
-position: 149,177
----
-Narrator: Hello this is a test
--> its working
-    Narrator: Yay
--> its not working
-    Narrator: Lets see what we can do about that
-
+Okada: Good Morning, Fine sir. One 
 ===
