@@ -377,7 +377,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639224401673407163
+  lastModified: 639227663198716390
   FileSizes:
   - Name: Desktop
     Value: 2138
@@ -536,7 +536,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2959048370359251756}
   cacheVersion: 131859
-  cacheTime: 639224401673407163
+  cacheTime: 639227663198716390
   SerializableEventsDict:
   - key: event:/sample loop (simple)
     index: 0
@@ -600,10 +600,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: event:/mus/mus_day_1_mus
   Guid:
-    Data1: -577742378
-    Data2: 1123272929
-    Data3: 2006356642
-    Data4: 2004666699
+    Data1: 1210183592
+    Data2: 1132529837
+    Data3: 1239902888
+    Data4: -1619509090
   Banks:
   - {fileID: 2199961473663073932}
   IsStream: 1
@@ -613,7 +613,7 @@ MonoBehaviour:
   - {fileID: -6481745039843702383}
   MinDistance: 1
   MaxDistance: 20
-  Length: 251331
+  Length: 250395
 --- !u!114 &82228625216237656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,10 +813,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639224401673387133
+  lastModified: 639227663198569864
   FileSizes:
   - Name: Desktop
-    Value: 10451264
+    Value: 10448000
   Exists: 1
 --- !u!114 &2258341764840890219
 MonoBehaviour:
