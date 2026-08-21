@@ -255,10 +255,10 @@ MonoBehaviour:
     Path: event:/amb/amb_bar_lp
   <Day1Music>k__BackingField:
     Guid:
-      Data1: -577742378
-      Data2: 1123272929
-      Data3: 2006356642
-      Data4: 2004666699
+      Data1: 1210183592
+      Data2: 1132529837
+      Data3: 1239902888
+      Data4: -1619509090
     Path: event:/mus/mus_day_1_mus
   <Day2Music>k__BackingField:
     Guid:
@@ -269,10 +269,10 @@ MonoBehaviour:
     Path: event:/mus/mus_day_2_mus
   <Day3Music>k__BackingField:
     Guid:
-      Data1: -577742378
-      Data2: 1123272929
-      Data3: 2006356642
-      Data4: 2004666699
+      Data1: 1210183592
+      Data2: 1132529837
+      Data3: 1239902888
+      Data4: -1619509090
     Path: event:/mus/mus_day_1_mus
   <Day4Music>k__BackingField:
     Guid:
